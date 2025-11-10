@@ -126,6 +126,50 @@ h2 {
     list-style: disc;
 }
 
+/* ====== Projects Grid (Bagian Pendidikan) ====== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.project-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 3px solid #0072ff;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-info h4 {
+    color: #0072ff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: #555;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -158,4 +202,20 @@ footer {
     border-top-right-radius: 20px;
     font-size: 0.9rem;
     margin-top: 2rem;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-img {
+        height: 140px;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
 }
